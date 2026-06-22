@@ -10,9 +10,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'LocalAd — Publicidad inteligente para presupuestos reales',
+  title: 'LocalAd — Panel de control',
   description:
-    'LocalAd gestiona tu publicidad con inteligencia artificial. Membresías mensuales proporcionales a tu presupuesto, desde $200 hasta $10.000. Pensado para emprendimientos, micro y pequeñas empresas.',
+    'Gestiona tu presupuesto publicitario, plataformas y campañas optimizadas por IA con LocalAd.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -34,8 +34,11 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#1e3a8a',
+  colorScheme: 'light dark',
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: 'white' },
+    { media: '(prefers-color-scheme: dark)', color: 'black' },
+  ],
 }
 
 export default function RootLayout({
